@@ -17,13 +17,27 @@ void bubbleSort(int A[], int n)
   }
 }
 
+void numeros(n){
+  char cadena1[4096];
+   FILE *fichero = fopen("/home/set/Documents/numeros10millones.txt", "r");
+   
+   // fputc(fgetc(fichero), stdout);
+   // while(!feof(fichero)) fgets(cadena1, 10, fichero);
+   fread(cadena1, 1, n, fichero);
+
+   fclose(fichero);
+   // getchar();
+  //  puts(cadena1);
+}
+
 /* main */
 int main() {
-  int A[] = {1,5,4,3,2};
+  int A[] = {};
   int n;
 
   printf("Ingresa el numero de numeros: \n");
   scanf("%d", &n);
+  numeros(n);
     printf("antes de ordenamiento:\n");
   for (int i = 0; i < n; i++)
   {
